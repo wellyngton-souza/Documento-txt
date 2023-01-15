@@ -24,13 +24,14 @@ def escrever():
     print("Texto Digitado com sucesso")
 
 def verificar(R):
-    if R == "1":
-        ler()
+    match R:
+        case "1":
+            ler()
 
-    elif R == "2":
-        escrever()
-
-    else:
-        print("Digite um valor valido")
+        case "2":
+            escrever()
+        
+        case _:
+            print("Digite um valor valido")
 
 resposta = verificar(resposta)
